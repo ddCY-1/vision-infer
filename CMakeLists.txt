@@ -10,5 +10,8 @@ target_include_directories(vt PUBLIC include)
 add_executable(test_layers tests/test_layers.cpp)
 target_link_libraries(test_layers PRIVATE vt)
 
+add_executable(bench_conv tools/bench_conv.cpp)
+target_link_libraries(bench_conv PRIVATE vt)
+
 enable_testing()
 add_test(NAME layers COMMAND test_layers)
